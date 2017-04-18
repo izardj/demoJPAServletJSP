@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name="Contact.findAll", query="SELECT c FROM Contact c")
+@NamedQuery(name = "Contact.findAll", query = "SELECT c FROM Contact c JOIN c.adresse a")
 public class Contact {
 
 	@Id
@@ -68,7 +68,8 @@ public class Contact {
 
 	@Override
 	public String toString() {
-		return "Contact [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse +"]";
+		return "Contact [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
+				+ "]";
 	}
 
 	public Collection<Film> getFilms() {

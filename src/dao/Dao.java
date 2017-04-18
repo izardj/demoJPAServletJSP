@@ -51,7 +51,7 @@ public class Dao implements IDao {
 	@Override
 	public Collection<Contact> findAllContacts() {
 		EntityManager em = emf.createEntityManager();
-		Collection<Contact> contacts = em.createNamedQuery("Adresse.findAll").getResultList();
+		Collection<Contact> contacts = em.createNamedQuery("Contact.findAll").getResultList();
 		em.close();
 		return contacts;
 	}

@@ -40,7 +40,7 @@
 			</table>
 		</div>
 	</c:if>
-	<c:if test="${! empty contacts}">
+	<c:if test="${empty contacts}">
 	<p>Aucun contact</p>
 	</c:if>
 </body>
